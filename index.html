@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine Mystery Box</title>
+  <link rel="stylesheet" href="App.css">
+</head>
+<body>
+  <div class="valentine-container">
+    <div class="decorations">
+      <!-- Floating hearts -->
+      <div class="floating-heart" style="animation-delay: 0s;"></div>
+      <div class="floating-heart" style="animation-delay: 1s;"></div>
+      <div class="floating-heart" style="animation-delay: 2s;"></div>
+      <div class="floating-heart" style="animation-delay: 3s;"></div>
+      <!-- Add more floating hearts as needed -->
+    </div>
+
+    <div class="mystery-box" onclick="openBox()">
+      <img src="your_picture.jpg" alt="Your Pic" class="profile-pic">
+    </div>
+
+    <div class="image-container" id="surpriseImage" style="display: none;">
+      <img src="your_surprise_image.jpg" alt="Surprise Pic" class="surprise-image">
+    </div>
+  </div>
+
+  <script>
+    function openBox() {
+      document.querySelector(".mystery-box").style.transform = "scale(0)";
+      document.getElementById("surpriseImage").style.display = "block";
+    }
+  </script>
+</body>
+</html>
